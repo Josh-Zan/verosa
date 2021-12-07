@@ -12,6 +12,7 @@ class ApiLink {
 
 class TopHeadlines {
   /// List declaration to save the fetched data.
+ 
   static List<ArticleModel> topHeadlines = [];
 
   static Future<void> getNews() async {
