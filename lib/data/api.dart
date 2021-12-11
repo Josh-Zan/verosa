@@ -3,20 +3,13 @@ import 'dart:convert';
 import 'package:verosa/model/articleModel.dart';
 import 'package:http/http.dart' as http;
 
-// class ApiLink {
-//   String part1 = 'https://newsapi.org/';
-//   String part2 = 'v2/top-headlines?';
-//   String part3 = 'country=us&category=business&';
-//   String apiId = 'apiKey=febd9945d43a4a0ba9601f2007860eba';
-// }
-
 class TopHeadlines {
   /// List declaration to save the fetched data.
   static List<ArticleModel> topHeadlines = [];
 
   static Future<void> getNews() async {
     var url = Uri.parse(
-        'https://newsapi.org/v2/top-headlines?country=us&apiKey=5d25ad6a1e86493c800f44c5a9f0ad0b');
+        'https://newsapi.org/v2/top-headlines?country=us&language=en&apiKey=5d25ad6a1e86493c800f44c5a9f0ad0b');
     var response = await http.get(url);
     var jsonData = jsonDecode(response.body);
 
@@ -56,7 +49,7 @@ class categoryTopHeadlines {
 
   static Future<void> getNews(String category) async {
     var url = Uri.parse(
-        'https://newsapi.org/v2/top-headlines?category=$category&apiKey=5d25ad6a1e86493c800f44c5a9f0ad0b');
+        'https://newsapi.org/v2/top-headlines?category=$category&language=en&apiKey=5d25ad6a1e86493c800f44c5a9f0ad0b');
     var response = await http.get(url);
     var jsonData = jsonDecode(response.body);
 
