@@ -17,9 +17,9 @@ class CategoryNews extends StatefulWidget {
 class _CategoryNewsState extends State<CategoryNews> {
   @override
   void initState() {
+    categoryTopHeadlines.getNews(widget.categoryName.toLowerCase());
     // TODO: implement initState
     super.initState();
-    categoryTopHeadlines.getNews(widget.categoryName.toLowerCase());
   }
 
   @override
@@ -182,7 +182,7 @@ class _CategoryNewsState extends State<CategoryNews> {
           Icons.navigate_before,
           size: 40,
         ),
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.deepOrangeAccent,
         foregroundColor: Colors.white,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,

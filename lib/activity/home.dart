@@ -61,7 +61,8 @@ class _HomeState extends State<Home> {
                           description:
                               TopHeadlines.topHeadlines[index].description,
                           url: TopHeadlines.topHeadlines[index].url,
-                          urlToImage: TopHeadlines.topHeadlines[index].urlToImage,
+                          urlToImage:
+                              TopHeadlines.topHeadlines[index].urlToImage,
                         );
                       }),
                 ],

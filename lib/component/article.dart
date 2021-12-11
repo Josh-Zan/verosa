@@ -55,7 +55,7 @@ class Article extends StatelessWidget {
                     title,
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
-                      color: Colors.lightBlueAccent,
+                      color: Colors.deepOrangeAccent,
                       fontSize: 18,
                     ),
                   ),
