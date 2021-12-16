@@ -4,11 +4,26 @@ import 'package:verosa/activity/home.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+
+
+  ThemeData _lightTheme = ThemeData(
+    accentColor: Colors.pink,
+    brightness: Brightness.light,
+    primaryColor: Colors.blue,
+  );
+
+  ThemeData _darkTheme = ThemeData(
+    accentColor: Colors.red,
+    brightness: Brightness.dark,
+    primaryColor: Colors.amber,
+  );
+
+  bool _light = true;
+
 
   // This widget is the root of your application.
   @override
@@ -17,8 +32,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Verosa',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme: _light ? _lightTheme : _darkTheme,
       darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: Home(),
     );
   }

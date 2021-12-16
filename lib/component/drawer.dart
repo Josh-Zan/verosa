@@ -19,6 +19,7 @@ class NavigationDrawer extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 40,
+                color: Colors.black,
               ),
             ),
             Divider(color: Colors.black54,),
@@ -29,14 +30,6 @@ class NavigationDrawer extends StatelessWidget {
             MenuItem(
               text: 'Country',
               icon: Icons.flag,
-            ),
-            MenuItem(
-              text: 'Light Mode',
-              icon: Icons.brightness_1_outlined,
-            ),
-            MenuItem(
-              text: 'Dark Mode',
-              icon: Icons.brightness_3_sharp,
             ),
           ],
         ),

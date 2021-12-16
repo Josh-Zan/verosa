@@ -20,6 +20,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<CategoryModel> categories = <CategoryModel>[];
+  bool _light = true;
 
   @override
   void initState() {
@@ -28,6 +29,7 @@ class _HomeState extends State<Home> {
     categories = getCategories();
     TopHeadlines.getNews();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,18 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black,),
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        actions: [
+          Switch(
+              value: _light,
+              onChanged: (state) {
+                setState(() {
+                  _light = state;
+                });
+              }),
+        ],
       ),
       body: Stack(
         children: <Widget>[
