@@ -17,11 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Verosa',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        primarySwatch: Colors.blue,
-      ),
-      home: const Home(),
+      theme: ThemeData(),
+      darkTheme: ThemeData.dark(),
+      home: Home(),
     );
   }
 }

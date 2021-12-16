@@ -36,7 +36,7 @@ class _ArticleViewState extends State<ArticleView> {
           Icons.navigate_before,
           size: 40,
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.deepOrangeAccent,
         foregroundColor: Colors.white,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,

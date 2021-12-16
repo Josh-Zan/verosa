@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:verosa/component/article.dart';
 import 'package:verosa/component/category.dart';
+import 'package:verosa/component/drawer.dart';
 import 'package:verosa/data/api.dart';
 import 'package:verosa/data/categoryData.dart';
 import 'package:verosa/model/categoryModel.dart';
@@ -30,6 +32,20 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavigationDrawer(),
+      appBar: AppBar(
+        title: Text(
+          'VEROSA',
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.black,),
+      ),
       body: Stack(
         children: <Widget>[
           SingleChildScrollView(

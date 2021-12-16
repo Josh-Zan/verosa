@@ -2,7 +2,7 @@
     package="com.example.verosa">
    <application
         android:label="Verosa"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@drawable/splash">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
